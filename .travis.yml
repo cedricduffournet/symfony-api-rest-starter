@@ -1,0 +1,12 @@
+services:
+  - docker
+
+before_install:
+  sudo service mysql stop
+
+script:
+  - make test
+  - .docker/healthcheck.sh 
+  - make behat
+  - make reload-schema
+  - make fixtures

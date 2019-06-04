@@ -1,0 +1,9 @@
+nelmio_cors:
+  paths:
+    '^/':
+      allow_credentials: true
+      allow_origin: ['*']
+      allow_headers: ['*']
+      allow_methods: ['POST', 'PUT', 'GET', 'DELETE', 'OPTIONS']
+      max_age: 3600
+      expose_headers: ['Location','Content-Disposition']

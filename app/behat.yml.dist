@@ -1,0 +1,29 @@
+default:
+    suites:
+        default:
+            paths:
+                features: src/Features
+            contexts:
+                - FeatureContext:
+                    doctrine: "@doctrine"
+                - App\Features\Context\RestApiContext
+                - App\Features\Context\OAuthClientSetupContext:
+                    clientManager: '@fos_oauth_server.client_manager'
+                - App\Features\Context\GroupSetupContext:
+                    groupManager: '@fos_user.group_manager'
+                - App\Features\Context\UserSetupContext:
+                    userManager: '@fos_user.user_manager'
+                    groupManager: '@fos_user.group_manager'
+                    civilityService: '@App\Service\CivilityService'
+                - App\Features\Context\CivilitySetupContext:
+                    civilityService: '@App\Service\CivilityService'
+            
+
+    extensions:
+        Imbo\BehatApiExtension:
+            apiClient:
+                base_uri: http://nginx
+        Behat\Symfony2Extension:
+            kernel:
+                bootstrap: features/bootstrap/bootstrap.php
+                class: App\Kernel

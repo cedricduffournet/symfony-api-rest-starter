@@ -1,0 +1,20 @@
+controllers:
+    resource: ../../src/Controller/
+    type: annotation
+    prefix: /api
+
+#controller_front:
+#    resource: ../../src/Controller/DefaultController.php
+#    type:     annotation
+
+controller_public:
+    resource: ../../src/Controller/PublicController.php
+    type:     annotation
+
+controller_civility:
+    resource: ../../src/Controller/CivilityController.php
+    type:     annotation
+
+controller_oauth:
+    resource: ../../src/Controller/OAuthTokenController.php
+    type: annotation

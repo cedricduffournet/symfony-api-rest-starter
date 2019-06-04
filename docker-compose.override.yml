@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+    php:
+        volumes:
+          - "./volumes/php/var/cache:/var/www/dev/var/cache/:rw"
+          - "./volumes/php/var/sessions:/var/www/dev/var/sessions/:rw"
+          - "./volumes/php/var/log:/var/www/dev/var/log/:rw"
+          - "./app:/var/www/dev"

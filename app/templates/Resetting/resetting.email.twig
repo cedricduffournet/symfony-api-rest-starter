@@ -1,0 +1,13 @@
+{% block subject %}
+{{ 'resetting.email.subject'|trans }}
+{% endblock %}
+{% block body_text %}
+{% endblock %}
+{% block body_html %}
+{{ 'general.email.hello'|trans({'%firstname%': user.firstname, '%lastname%': user.lastname})}},<br />
+<br />
+{{ 'resetting.email.message'|trans }} <a href="{{confirmationUrl|replace({'%23':'#'})}}">ICI</a>.<br />
+<br />
+{{'common.cordially'|trans}},<br />
+{{'common.theteam'|trans}}
+{% endblock %}

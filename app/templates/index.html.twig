@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SEMER - HYPERVIEW</title>
+  <base href="{{ path('homepage') }}">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link href="js/styles.css" rel="stylesheet"/>
+</head>
+<body>
+<hyperview-app>Chargement...</hyperview-app>
+{% block javascripts %}
+    <script type="text/javascript" src="{{ asset('js/runtime.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/polyfills.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/assets/canvasjs/canvasjs.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/scripts.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,30 @@
+/.env.local
+/.env.local.php
+/.env.*.local
+/public/bundles/
+/var/*
+!/var/cache
+/var/cache/*
+!var/cache/.gitkeep
+!/var/log
+/var/log/*
+!var/log/.gitkeep
+!/var/sessions
+/var/sessions/*
+!var/sessions/.gitkeep
+/vendor/
+
+###> behat/symfony2-extension ###
+behat.yml
+###< behat/symfony2-extension ###
+
+###> symfony/phpunit-bridge ###
+.phpunit
+/phpunit.xml
+###< symfony/phpunit-bridge ###
+
+###> phpunit/phpunit ###
+/phpunit.xml
+###< phpunit/phpunit ###
+
+/.php_cs.cache

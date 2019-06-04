@@ -1,0 +1,14 @@
+App\Entity\User:
+  constraints:
+    - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: email
+  properties:
+    email:
+      - Email: ~
+    plainPassword:
+      - Regex:
+          pattern: '/^(?=.*[a-z])(?=.*\d)[a-zA-Z0-9\W]{8,}$/'
+          message: Use at least one lowercase letter, one numeral, and eight characters.
+
+App\Entity\Group:
+  constraints:
+    - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: name
