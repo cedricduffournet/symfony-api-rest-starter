@@ -1,0 +1,5 @@
+# See https://symfony.com/doc/current/email/dev_environment.html
+swiftmailer:
+    delivery_address: 'cedricdufftest@gmail.com'
+    delivery_whitelist:
+        - '/@cedricduffournet\.com$/'

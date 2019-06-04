@@ -1,0 +1,7 @@
+FROM docker.io/dakodapp/php-7:latest
+
+ARG WORK_DIR
+WORKDIR $WORK_DIR
+
+ENV COMPOSER_ALLOW_SUPERUSER 1
+USER www-data

@@ -1,0 +1,16 @@
+fos_user_registration_check_email:
+  path: /registration/check-email
+  defaults:
+    _controller: FOS\UserBundle\Controller\RegistrationController::checkEmailAction
+  methods: [GET]
+
+fos_user_registration_confirm:
+  path: /front#/register/confirm/{token}
+  methods: [GET]
+
+fos_user_resetting_reset:
+  path: /front#/password/reset/{token}
+  methods: [GET]
+
+fos_user_security:
+  resource: "@FOSUserBundle/Resources/config/routing/security.xml"

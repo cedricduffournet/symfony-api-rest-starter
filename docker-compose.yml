@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+
+    db:
+        image: mysql:5.7.19
+        hostname: db
+        container_name: symfony-oauth_db
+        volumes:
+          - "./volumes/mysql_dev:/var/lib/mysql"
+        env_file:
+          - ./.env
+        ports:
+          - 3306:3306
+        healthcheck:
+          test: "cat /proc/net/tcp /proc/net/tcp6 | grep ':0CEA'"
+          interval: 10s
+          timeout: 5s
+          retries: 5
+
+    nginx:
+        image: docker.io/dakodapp/nginx.dev
+        hostname: nginx
+        volumes:
+          - "./volumes/nginx/logs:/var/log/nginx/"
+          - "./app:/var/www/dev"
+        ports:
+          - 81:80
+        depends_on:
+          - php
+
+    php:
+        build:
+            context: .
+            dockerfile: .docker/dev/Dockerfile
+            args:
+                WORK_DIR: /var/www/dev
+        hostname: php
+        env_file:
+          - ./.env
+        depends_on:
+          - db

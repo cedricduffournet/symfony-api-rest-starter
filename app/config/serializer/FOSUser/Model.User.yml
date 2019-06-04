@@ -1,0 +1,15 @@
+FOS\UserBundle\Model\User:
+  exclusion_policy: ALL
+  properties:
+    email:
+      expose: true
+      groups  : [user_info, user_list, company_details]
+    enabled:
+      expose: true
+      groups  : [user_info, user_list, company_details]
+    roles:
+      expose: true
+      groups  : [user_info]
+      accessor:
+          getter: getRoles
+          setter: setRoles

@@ -1,0 +1,9 @@
+FOS\UserBundle\Model\Group:
+  exclusion_policy: ALL
+  properties:
+    roles:
+      expose: true
+      #groups  : [group_details, group_list]
+    name:
+      expose: true
+      #groups  : [group_details, user_info, user_list, company_details, der_station_list, der_user_list, der_group_list, station_list, group_with_user, group_list]

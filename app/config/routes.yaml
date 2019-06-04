@@ -1,0 +1,6 @@
+_welcome:
+    path:  /
+    controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::urlRedirectAction
+    defaults:
+        path: /doc
+        permanent: true # this for 301

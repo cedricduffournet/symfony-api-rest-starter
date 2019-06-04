@@ -1,0 +1,24 @@
+nelmio_api_doc:
+  documentation:
+    info:
+      title: My App
+      description: This is an awesome app!
+      version: 1.0.0
+    securityDefinitions:
+      Bearer:
+        type: apiKey
+        description: "Value: Bearer {token}"
+        name: Authorization
+        in: header
+    security:
+      - Bearer: []
+  areas: # to filter documented areas
+    default:
+      path_patterns:
+        - ^/api # Accepts routes under /api except /api/doc
+        - ^/public
+        - ^/oauth/v2/token
+        - ^/oauth/v2/proxy
+    superadmin:
+      path_patterns:
+        - ^/api/civilities

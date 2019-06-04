@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+    php:
+        build:
+            context: .
+            dockerfile: .docker/test/Dockerfile
+            args:
+                WORK_DIR: /var/www/dev

@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="common.list">
+                <source>common.list</source>
+                <target>List</target>
+            </trans-unit>
+            <trans-unit id="common.name">
+                <source>common.name</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="common.documentation">
+                <source>common.documentation</source>
+                <target>Documentation</target>
+            </trans-unit>
+            <trans-unit id="common.disconnect">
+                <source>common.disconnect</source>
+                <target>Disconnect</target>
+            </trans-unit>
+            <trans-unit id="common.read">
+                <source>common.read</source>
+                <target>show</target>
+            </trans-unit>
+            <trans-unit id="common.save">
+                <source>common.save</source>
+                <target>Save</target>
+            </trans-unit>
+            <trans-unit id="common.backtolist">
+                <source>common.backtolist</source>
+                <target>Back to the list</target>
+            </trans-unit>
+            <trans-unit id="common.show">
+                <source>common.show</source>
+                <target>Show</target>
+            </trans-unit>
+            <trans-unit id="common.add">
+                <source>common.add</source>
+                <target>Add</target>
+            </trans-unit>
+            <trans-unit id="common.edit">
+                <source>common.edit</source>
+                <target>Edit</target>
+            </trans-unit>
+            <trans-unit id="common.delete">
+                <source>common.delete</source>
+                <target>Delete</target>
+            </trans-unit>
+            <trans-unit id="common.cancel">
+                <source>common.cancel</source>
+                <target>Cancel</target>
+            </trans-unit>
+            <trans-unit id="common.post_created_successfully">
+                <source>common.post_created_successfully</source>
+                <target>Post created successfully!</target>
+            </trans-unit>
+            <trans-unit id="common.post_deleted_successfully">
+                <source>common.post_deleted_successfully</source>
+                <target>Post deleted successfully</target>
+            </trans-unit>
+            <trans-unit id="common.delete_post_modal_title">
+                <source>common.delete_post_modal_title</source>
+                <target>Are you sure you want to delete this post?</target>
+            </trans-unit>
+            <trans-unit id="common.delete_post_modal_body">
+                <source>common.delete_post_modal_body</source>
+                <target>This action cannot be undone.</target>
+            </trans-unit>
+            <trans-unit id="common.menu.user">
+                <source>common.menu.user</source>
+                <target>Users</target>
+            </trans-unit>
+            <trans-unit id="common.menu.user_group">
+                <source>common.menu.user_group</source>
+                <target>User groups</target>
+            </trans-unit>
+            <trans-unit id="common.menu.laboratories">
+                <source>common.menu.laboratories</source>
+                <target>Laboratories</target>
+            </trans-unit>
+            <trans-unit id="common.connect.msg_required_authentication">
+                <source>common.connect.msg_required_authentication</source>
+                <target>Vous must be authenticated to access the application, click on the link bellow to connect : </target>
+            </trans-unit>
+            <trans-unit id="common.welcome_message">
+                <source>common.welcome_message</source>
+                <target>Welcome on HYPERVIEW</target>
+            </trans-unit>
+            <trans-unit id="http_error.name">
+                <source>http_error.name</source>
+                <target>Error %status_code%</target>
+            </trans-unit>
+            <trans-unit id="http_error.description">
+                <source>http_error.description</source>
+                <target>There was an unknown error (HTTP %status_code%) that prevented to complete your request.</target>
+            </trans-unit>
+            <trans-unit id="http_error_403.description">
+                <source>http_error_403.description</source>
+                <target>You don't have permission to access to this resource.</target>
+            </trans-unit>
+            <trans-unit id="http_error_403.suggestion">
+                <source>http_error_403.suggestion</source>
+                <target>Ask your manager or system administrator to grant you access to this resource.</target>
+            </trans-unit>
+            <trans-unit id="http_error_404.description">
+                <source>http_error_404.description</source>
+                <target>We couldn't find the page you requested.</target>
+            </trans-unit>
+            <trans-unit id="http_error_500.description">
+                <source>http_error_500.description</source>
+                <target>There was an internal server error.</target>
+            </trans-unit>
+            <trans-unit id="registration.email.message">
+                <source>registration.email.message</source>
+                <target>Bonjour %username% !
+                Pour valider votre compte utilisateur, merci de vous rendre sur %confirmationUrl%
+
+                Cordialement,
+                L'équipe
+                </target>
+            </trans-unit>
+            <trans-unit id="resetting.email.subject">
+                <source>resetting.email.subject</source>
+                <target>Réinitialisation de votre mot de passe</target>
+            </trans-unit>
+            <trans-unit id="resetting.email.message">
+                <source>resetting.email.message</source>
+                <target><![CDATA[
+                Bonjour %username%,<br />
+                <br />
+                Pour réinitialiser votre mot de passe, merci de vous rendre sur <a href="%confirmationUrl%">%confirmationUrl%</a>.<br />
+                <br />
+                Cordialement,<br />
+                L'équipe
+                ]]>
+                </target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

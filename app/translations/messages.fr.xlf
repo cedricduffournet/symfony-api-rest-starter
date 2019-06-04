@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="common.list">
+                <source>common.list</source>
+                <target>Liste</target>
+            </trans-unit>
+            <trans-unit id="common.name">
+                <source>common.name</source>
+                <target>Nom</target>
+            </trans-unit>
+            <trans-unit id="common.documentation">
+                <source>common.documentation</source>
+                <target>Documentation</target>
+            </trans-unit>
+            <trans-unit id="common.read">
+                <source>common.read</source>
+                <target>Lecture</target>
+            </trans-unit>
+            <trans-unit id="common.save">
+                <source>common.save</source>
+                <target>Enregistrer</target>
+            </trans-unit>
+            <trans-unit id="common.backtolist">
+                <source>common.backtolist</source>
+                <target>Revenir à la liste</target>
+            </trans-unit>
+            <trans-unit id="common.show">
+                <source>common.show</source>
+                <target>Voir</target>
+            </trans-unit>
+            <trans-unit id="common.add">
+                <source>common.add</source>
+                <target>Ajouter</target>
+            </trans-unit>
+            <trans-unit id="common.edit">
+                <source>common.edit</source>
+                <target>Modifier</target>
+            </trans-unit>
+            <trans-unit id="common.delete">
+                <source>common.delete</source>
+                <target>Supprimer</target>
+            </trans-unit>
+            <trans-unit id="common.cancel">
+                <source>common.cancel</source>
+                <target>Annuler</target>
+            </trans-unit>
+            <trans-unit id="common.post_created_successfully">
+                <source>common.post_created_successfully</source>
+                <target>Bravo, l'entité a été ajouté</target>
+            </trans-unit>
+            <trans-unit id="common.post_deleted_successfully">
+                <source>common.post_deleted_successfully</source>
+                <target>Entité supprimée avec succès</target>
+            </trans-unit>
+            <trans-unit id="common.delete_post_modal_title">
+                <source>common.delete_post_modal_title</source>
+                <target>Etes vous sur de vouloir supprimer cette entité ?</target>
+            </trans-unit>
+            <trans-unit id="common.delete_post_modal_body">
+                <source>common.delete_post_modal_body</source>
+                <target>Cette action ne pourra pas être annulée</target>
+            </trans-unit>
+            <trans-unit id="common.menu.user">
+                <source>common.menu.user</source>
+                <target>Utilisateurs</target>
+            </trans-unit>
+            <trans-unit id="common.menu.user_group">
+                <source>common.menu.user_group</source>
+                <target>Groupe utilisateurs</target>
+            </trans-unit>
+            <trans-unit id="common.connect.msg_required_authentication">
+                <source>common.connect.msg_required_authentication</source>
+                <target>Vous devez être identifier pour accéder à l'application, utilisez le lien ci-dessous  :</target>
+            </trans-unit>
+            <trans-unit id="common.welcome_message">
+                <source>common.welcome_message</source>
+                <target>Bienvenue dans HYPERVIEW</target>
+            </trans-unit>
+            <trans-unit id="common.cordially">
+                <source>common.cordially</source>
+                <target>Cordialement</target>
+            </trans-unit>
+            <trans-unit id="common.theteam">
+                <source>common.theteam</source>
+                <target>L'équipe</target>
+            </trans-unit>
+            <trans-unit id="http_error.name">
+                <source>http_error.name</source>
+                <target>Erreur %status_code%</target>
+            </trans-unit>
+            <trans-unit id="http_error.description">
+                <source>http_error.description</source>
+                <target>Erreur inconnu (HTTP %status_code%)</target>
+            </trans-unit>
+            <trans-unit id="http_error_403.description">
+                <source>http_error_403.description</source>
+                <target>Vous n'avew pas les droits suffisant.</target>
+            </trans-unit>
+            <trans-unit id="http_error_403.suggestion">
+                <source>http_error_403.suggestion</source>
+                <target>Contacter l'administrateur systeme pour vous donner les droits.</target>
+            </trans-unit>
+            <trans-unit id="http_error_404.description">
+                <source>http_error_404.description</source>
+                <target>La page n'a pas été trouvée</target>
+            </trans-unit>
+            <trans-unit id="http_error_500.description">
+                <source>http_error_500.description</source>
+                <target>Erreur interne.</target>
+            </trans-unit>
+            <trans-unit id="registration.email.subject">
+                <source>registration.email.subject</source>
+                <target>Bienvenue %firstname% %lastname% !</target>
+            </trans-unit>
+            <trans-unit id="general.email.hello">
+                <source>general.email.hello</source>
+                <target>Bonjour %firstname% %lastname%</target>
+            </trans-unit>
+            <trans-unit id="registration.email.message">
+                <source>registration.email.message</source>
+                <target>Pour valider votre compte utilisateur, merci de cliquer</target>
+            </trans-unit>
+            <trans-unit id="resetting.email.subject">
+                <source>resetting.email.subject</source>
+                <target>Réinitialisation de votre mot de passe</target>
+            </trans-unit>
+            <trans-unit id="resetting.email.message">
+                <source>resetting.email.message</source>
+                <target>Pour réinitialiser votre mot de passe, merci de vous rendre sur</target>
+            </trans-unit>
+            <trans-unit id="adduserrequest.email.subject">
+                <source>adduserrequest.email.subject</source>
+                <target>Nouvelle demande de rattachement en attente de validation</target>
+            </trans-unit>
+            <trans-unit id="adduserrequest.email.message">
+                <source>adduserrequest.email.message</source>
+                <target>Une personne souhaite être rattaché à votre laboratoire. Valider la demande en vous connectant sur</target>
+            </trans-unit>
+            <trans-unit id="refuseduserrequest.email.subject">
+                <source>refuseduserrequest.email.subject</source>
+                <target>Votre demande de rattachement a été refusée</target>
+            </trans-unit>
+            <trans-unit id="refuseduserrequest.email.message">
+                <source>refuseduserrequest.email.message</source>
+                <target>Votre demande de rattachement au laboratoire %company% a été refusée pour la raison suivante :</target>
+            </trans-unit>
+            <trans-unit id="refuseduserrequestpart2.email.message">
+                <source>refuseduserrequestpart2.email.message</source>
+                <target>Vous pouvez faire une nouvelle demande en vous connectant sur</target>
+            </trans-unit>
+            <trans-unit id="accepteduserrequest.email.subject">
+                <source>accepteduserrequest.email.subject</source>
+                <target>Votre demande de rattachement a été acceptée</target>
+            </trans-unit>
+            <trans-unit id="accepteduserrequest.email.message">
+                <source>accepteduserrequest.email.message</source>
+                <target>Votre demande de rattachement au laboratoire %company% a été acceptée.</target>
+            </trans-unit>
+            <trans-unit id="accepteduserrequestpart2.email.message">
+                <source>accepteduserrequestpart2.email.message</source>
+                <target>Connectez-vous à</target>
+            </trans-unit>
+            <trans-unit id="addmembership.email.subject">
+                <source>addmembership.email.subject</source>
+                <target>Nouvelle demande d'adhésion à valider</target>
+            </trans-unit>
+            <trans-unit id="addmembership.email.message">
+                <source>addmembership.email.message</source>
+                <target>Vous avez une nouvelle demande d'adhésion à valider</target>
+            </trans-unit>
+            <trans-unit id="addmembership2.email.message">
+                <source>addmembership2.email.message</source>
+                <target>Vous pouvez la valider en vous connectant sur</target>
+            </trans-unit>
+            <trans-unit id="membershipcampaign.email.subject">
+                <source>membershipcampaign.email.subject</source>
+                <target>Renouvellement de votre contract d'adhésion</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
