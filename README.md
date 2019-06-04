@@ -1,7 +1,7 @@
 # Symfony 4 rest starter
 Simple project to start developping rest api with symfony 4
 
-[![SymfonyInsight](https://insight.symfony.com/projects/81bfd897-59f6-4ac4-9682-919774d31b82/mini.svg)](https://insight.symfony.com/projects/81bfd897-59f6-4ac4-9682-919774d31b82)
+[![SymfonyInsight](https://insight.symfony.com/projects/cbf6d535-ea02-4786-9179-49b254bb1242/mini.svg)](https://insight.symfony.com/projects/cbf6d535-ea02-4786-9179-49b254bb1242)
 [![StyleCI](https://github.styleci.io/repos/190141271/shield?branch=master)](https://github.styleci.io/repos/190141271)
 [![Build Status](https://travis-ci.com/cedricduffournet/symfony-api-rest-starter.svg?token=JpJyZmdDC55Vj3yZZkTq&branch=master)](https://travis-ci.com/cedricduffournet/symfony-api-rest-starter)
 
