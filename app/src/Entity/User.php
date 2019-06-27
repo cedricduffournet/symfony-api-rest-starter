@@ -2,11 +2,11 @@
 
 namespace App\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\Criteria;
 use Doctrine\ORM\Mapping as ORM;
 use FOS\UserBundle\Model\User as BaseUser;
+use JMS\Serializer\Annotation\Exclude;
 use JMS\Serializer\Annotation\Groups;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -100,12 +100,14 @@ class User extends BaseUser
     protected $webmaster = false;
 
     /**
-     * Array of all user roles?
+     * Url confirmation for email registration.
      *
-     * @SerializedName("allRoles")
-     * @Groups({"user_info"})
+     * @var string
+     *
+     * @ORM\Column(name="confirmation_url", type="string", nullable=true, length=255)
+     * @Exclude
      */
-    //protected $allRoles = [];
+    public $confirmationUrl = '';
 
     public function setGroups(Collection $groups = null): void
     {
@@ -143,21 +145,6 @@ class User extends BaseUser
 
         return $collection->matching($criteria)->count() > 0;
     }
-
-    public function getCompanyUsers(): ?ArrayCollection
-    {
-        return $this->companyUsers;
-    }
-
-    /*     public function setAllRoles($allRoles)
-        {
-            $this->allRoles = $allRoles;
-        } */
-
-    /*     public function getAllRoles()
-        {
-            return $this->allRoles;
-        } */
 
     public function setFirstname(string $firstname): void
     {
@@ -213,5 +200,15 @@ class User extends BaseUser
     {
         parent::setEmail($email);
         parent::setUsername($email);
+    }
+
+    public function setConfirmationUrl($url): void
+    {
+        $this->confirmationUrl = $url;
+    }
+
+    public function getConfirmationUrl(): ?string
+    {
+        return $this->confirmationUrl;
     }
 }

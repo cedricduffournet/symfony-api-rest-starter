@@ -17,6 +17,9 @@ database-create:
 database-update:
 	docker-compose exec php bin/console doctrine:schema:update --force
 
+database-migrate:
+	docker-compose exec php bin/console doctrine:migrations:migrate --no-interaction
+
 composer-install:
 	docker-compose exec php composer install
 
