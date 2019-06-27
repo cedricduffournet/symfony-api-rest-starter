@@ -6,6 +6,7 @@ use App\Entity\Civility;
 use App\Entity\Group;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -18,6 +19,7 @@ class UserType extends AbstractType
                 ->add('lastname')
                 ->add('telephoneNumber')
                 ->add('enabled')
+                ->add('confirmationUrl', UrlType::class)
                 ->add('civility', EntityType::class,
                         ['class' => Civility::class, 'choice_label' => 'name'])
                 ->add('groups', EntityType::class, [
