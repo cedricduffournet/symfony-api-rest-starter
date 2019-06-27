@@ -68,7 +68,8 @@
         ]
     },
     "conflict": {
-        "symfony/symfony": "*"
+        "symfony/symfony": "*",
+        "ocramius/proxy-manager": "<2.1"
     },
     "extra": {
         "symfony": {
