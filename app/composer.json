@@ -26,7 +26,8 @@
         "symfony/templating": "4.2.*",
         "symfony/translation": "4.2.*",
         "symfony/twig-bundle": "4.2.*",
-        "symfony/yaml": "4.2.*"
+        "symfony/yaml": "4.2.*",
+        "ocramius/proxy-manager": "2.2.2"
     },
     "config": {
         "preferred-install": {
@@ -85,6 +86,6 @@
         "symfony/maker-bundle": "^1.11",
         "symfony/phpunit-bridge": "4.2.*",
         "symfony/profiler-pack": "^1.0",
-        "ocramius/proxy-manager": "^2.1"
+        "ocramius/proxy-manager": "2.2.2"
     }
 }
