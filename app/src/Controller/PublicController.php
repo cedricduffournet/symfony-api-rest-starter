@@ -67,6 +67,13 @@ class PublicController extends AbstractFOSRestController
      *         required=true,
      *         type="string"
      *     ),
+     *     @SWG\Parameter(
+     *         name="confirmationUrl",
+     *         in="formData",
+     *         description="Wich url validate confirmation",
+     *         required=true,
+     *         type="string"
+     *     ),
      *     @SWG\Response(
      *         response="200",
      *         description="Returned when successful"
@@ -333,7 +340,6 @@ class PublicController extends AbstractFOSRestController
             /* @var $tokenGenerator TokenGeneratorInterface */
             $user->setConfirmationToken($this->tokenGenerator->generateToken());
         }
-
         /* Dispatch confirm event */
         $event = new GetResponseUserEvent($user, $request);
         $this->eventDispatcher->dispatch(FOSUserEvents::RESETTING_SEND_EMAIL_CONFIRM, $event);
@@ -345,6 +351,8 @@ class PublicController extends AbstractFOSRestController
     {
         $this->mailer->sendResettingEmailMessage($user);
         $user->setPasswordRequestedAt(new \DateTime());
+        $confirmationUrl = $request->request->get('confirmationUrl');
+        $user->setConfirmationUrl($confirmationUrl);
         $this->userManager->updateUser($user);
 
         /* Dispatch completed event */

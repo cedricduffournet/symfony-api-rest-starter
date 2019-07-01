@@ -6,7 +6,7 @@
 {% block body_html %}
 {{ 'general.email.hello'|trans({'%firstname%': user.firstname, '%lastname%': user.lastname})}},<br />
 <br />
-{{ 'resetting.email.message'|trans }} <a href="{{confirmationUrl|replace({'%23':'#'})}}">ICI</a>.<br />
+{{ 'resetting.email.message'|trans }} <a href="{{user.confirmationUrl|replace({'%23':'#','token':user.confirmationToken})}}">ICI</a>.<br/>
 <br />
 {{'common.cordially'|trans}},<br />
 {{'common.theteam'|trans}}
