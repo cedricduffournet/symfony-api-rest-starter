@@ -339,6 +339,9 @@ class PublicController extends AbstractFOSRestController
         if (null === $user->getConfirmationToken()) {
             /* @var $tokenGenerator TokenGeneratorInterface */
             $user->setConfirmationToken($this->tokenGenerator->generateToken());
+
+            $confirmationUrl = $request->request->get('confirmationUrl');
+            $user->setConfirmationUrl($confirmationUrl);
         }
         /* Dispatch confirm event */
         $event = new GetResponseUserEvent($user, $request);
@@ -351,8 +354,6 @@ class PublicController extends AbstractFOSRestController
     {
         $this->mailer->sendResettingEmailMessage($user);
         $user->setPasswordRequestedAt(new \DateTime());
-        $confirmationUrl = $request->request->get('confirmationUrl');
-        $user->setConfirmationUrl($confirmationUrl);
         $this->userManager->updateUser($user);
 
         /* Dispatch completed event */
