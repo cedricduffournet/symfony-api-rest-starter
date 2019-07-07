@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Civility;
 use App\Form\CivilityType;
 use App\Service\CivilityServiceInterface;
+use Doctrine\DBAL\Exception\ForeignKeyConstraintViolationException;
 use FOS\RestBundle\Controller\AbstractFOSRestController;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use FOS\RestBundle\View\View;
@@ -16,6 +17,7 @@ use Swagger\Annotations as SWG;
 use Symfony\Component\Form\Form;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 
 /**
  * Controller used to managed Civility resource.
@@ -204,7 +206,11 @@ class CivilityController extends AbstractFOSRestController
      */
     public function deleteCivility(Request $request, Civility $civility): View
     {
-        $this->civilityService->deleteCivility($civility);
+        try {
+            $this->civilityService->deleteCivility($civility);
+        } catch (ForeignKeyConstraintViolationException $e) {
+            throw new BadRequestHttpException('You can not delete this entity');
+        }
 
         return $this->view([], Response::HTTP_NO_CONTENT);
     }
