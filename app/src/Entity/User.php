@@ -83,7 +83,7 @@ class User extends BaseUser
      * @var Civility
      *
      * @ORM\ManyToOne(targetEntity="Civility")
-     * @ORM\JoinColumn(name="civility_id", referencedColumnName="id",  onDelete="CASCADE")
+     * @ORM\JoinColumn(nullable=false)
      * @Groups({"user_info"})
      * @Assert\NotBlank()
      */
