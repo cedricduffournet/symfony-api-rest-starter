@@ -34,6 +34,9 @@ class Civility implements CivilityInterface
      *
      * @ORM\Column(name="name", type="string")
      * @Assert\NotBlank
+     * @Assert\Length(
+     *      max = 255
+     * )
      * @Groups({"Default","user_info"})
      */
     private $name;
@@ -45,6 +48,9 @@ class Civility implements CivilityInterface
      *
      * @ORM\Column(name="code", type="string", length=10)
      * @Assert\NotBlank
+     * @Assert\Length(
+     *      max = 10
+     * )
      * @Groups({"Default","user_info"})
      */
     private $code;
