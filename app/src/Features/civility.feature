@@ -107,6 +107,23 @@ Feature: Provide a consistent standard JSON API endpoint
     When I request "/api/civilities/2" using HTTP GET
     Then the response code is 404
 
+  Scenario: Cannot delete a Civility linked to user
+    Given I am successfully logged in with username: "superadmin@test.com", password: "adminpwd" and grantType: "password"
+    When I request "/api/civilities/1" using HTTP DELETE
+    Then the response code is 400
+
+  Scenario: Cannot add a new Civility is code is longer than 10 characters
+    Given I am successfully logged in with username: "superadmin@test.com", password: "adminpwd" and grantType: "password"
+    When the request body is:
+      """
+      {
+      "name": "New civility",
+      "code": "code longer than 10 characters"
+      }
+      """
+    And I request "/api/civilities" using HTTP POST
+    Then the response code is 400
+
   Scenario: Reader cannot add a new Civility
     Given I am successfully logged in with username: "reader@test.com", password: "readerpwd" and grantType: "password"
     And I request "/api/civilities" using HTTP POST
