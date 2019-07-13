@@ -1,9 +1,13 @@
 version: '3'
 
 services:
+    nginx:
+        volumes:
+          - "./volumes/nginx/logs:/var/log/nginx/:cached"
+          - "./app:/var/www/dev:cached"
     php:
         volumes:
-          - "./volumes/php/var/cache:/var/www/dev/var/cache/:rw"
-          - "./volumes/php/var/sessions:/var/www/dev/var/sessions/:rw"
-          - "./volumes/php/var/log:/var/www/dev/var/log/:rw"
-          - "./app:/var/www/dev"
+          - "./volumes/php/var/cache:/var/www/dev/var/cache/:rw,cached"
+          - "./volumes/php/var/sessions:/var/www/dev/var/sessions/:rw,cached"
+          - "./volumes/php/var/log:/var/www/dev/var/log/:rw,cached"
+          - "./app:/var/www/dev:cached"
