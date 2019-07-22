@@ -1,7 +1,7 @@
 fos_user:
     from_email: 
         address: '%env(APP_PROJECT_MAIL)%'
-        sender_name: "Veggie - %env(APP_PROJECT_NAME)%"
+        sender_name: "App - %env(APP_PROJECT_NAME)%"
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
     user_class: App\Entity\User
