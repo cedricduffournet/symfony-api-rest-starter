@@ -209,7 +209,7 @@ class CivilityController extends AbstractFOSRestController
         try {
             $this->civilityService->deleteCivility($civility);
         } catch (ForeignKeyConstraintViolationException $e) {
-            throw new BadRequestHttpException('You can not delete this entity');
+            return $this->view(['message' => 'You can not delete this entity !'], Response::HTTP_BAD_REQUEST);
         }
 
         return $this->view([], Response::HTTP_NO_CONTENT);
