@@ -17,7 +17,6 @@ use Swagger\Annotations as SWG;
 use Symfony\Component\Form\Form;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 
 /**
  * Controller used to managed Civility resource.
