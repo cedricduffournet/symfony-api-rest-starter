@@ -2,7 +2,7 @@
     "name": "cedricduffournet/symfony-api-rest-starter",
     "description": "A rest symfony project starter",
     "type": "project",
-    "license": "proprietary",
+    "license": "MIT",
     "require": {
         "php": "^7.1.3",
         "ext-ctype": "*",
