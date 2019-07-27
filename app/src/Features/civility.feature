@@ -145,10 +145,6 @@ Feature: Provide a consistent standard JSON API endpoint
     When I request "/api/civilities/1" using HTTP DELETE
     Then the response code is 401
 
-  Scenario: Reader cannot create a Civility if not logged in
-    When I request "/api/civilities" using HTTP POST
-    Then the response code is 401
-
   Scenario: Reader cannot update an existing Civility
     Given I am successfully logged in with username: "reader@test.com", password: "readerpwd" and grantType: "password"
     When I request "/api/civilities/1" using HTTP PUT
