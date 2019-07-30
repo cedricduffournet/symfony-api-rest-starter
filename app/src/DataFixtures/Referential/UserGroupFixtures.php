@@ -1,6 +1,6 @@
 <?php
 
-namespace App\DataFixtures\ORM\Referential;
+namespace App\DataFixtures\Referential;
 
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Bundle\FixturesBundle\FixtureGroupInterface;

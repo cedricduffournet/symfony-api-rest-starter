@@ -1,6 +1,6 @@
 <?php
 
-namespace App\DataFixtures\ORM\Referential;
+namespace App\DataFixtures\Referential;
 
 use App\Service\CivilityServiceInterface;
 use Doctrine\Bundle\FixturesBundle\Fixture;
