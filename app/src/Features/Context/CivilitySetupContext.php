@@ -2,7 +2,7 @@
 
 namespace App\Features\Context;
 
-use App\Service\CivilityServiceInterface;
+use App\Civility\CivilityServiceInterface;
 use Behat\Behat\Context\Context;
 use Behat\Behat\Context\SnippetAcceptingContext;
 use Behat\Gherkin\Node\TableNode;

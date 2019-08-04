@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Service;
+namespace App\Civility;
 
 use App\Entity\Civility;
 

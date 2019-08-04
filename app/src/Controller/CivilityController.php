@@ -2,9 +2,11 @@
 
 namespace App\Controller;
 
+use App\Civility\CivilityRequest;
+use App\Civility\CivilityRequestHandler;
+use App\Civility\CivilityServiceInterface;
 use App\Entity\Civility;
 use App\Form\CivilityType;
-use App\Service\CivilityServiceInterface;
 use Doctrine\DBAL\Exception\ForeignKeyConstraintViolationException;
 use FOS\RestBundle\Controller\AbstractFOSRestController;
 use FOS\RestBundle\Controller\Annotations as Rest;
@@ -30,12 +32,15 @@ class CivilityController extends AbstractFOSRestController
      */
     private $civilityService;
 
+    private $civilityRequestHandler;
+
     /**
      * CivilityController constructor.
      */
-    public function __construct(CivilityServiceInterface $civilityService)
+    public function __construct(CivilityServiceInterface $civilityService, CivilityRequestHandler $civilityRequestHandler)
     {
         $this->civilityService = $civilityService;
+        $this->civilityRequestHandler = $civilityRequestHandler;
     }
 
     /**
@@ -66,12 +71,12 @@ class CivilityController extends AbstractFOSRestController
      */
     public function postCivility(Request $request): View
     {
-        $civility = $this->civilityService->createCivility();
-        $form = $this->createForm(CivilityType::class, $civility);
+        $civilityRequest = new CivilityRequest();
+        $form = $this->createForm(CivilityType::class, $civilityRequest);
         $form->submit($request->request->all());
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->civilityService->updateCivility($civility);
+            $civility = $this->civilityRequestHandler->addCivility($civilityRequest);
 
             return $this->view($civility, Response::HTTP_CREATED);
         }
@@ -172,11 +177,12 @@ class CivilityController extends AbstractFOSRestController
      */
     public function putCivility(Request $request, Civility $civility): View
     {
-        $form = $this->createForm(CivilityType::class, $civility);
+        $civilityRequest = CivilityRequest::createFromCivility($civility);
+        $form = $this->createForm(CivilityType::class, $civilityRequest);
 
         $form->submit($request->request->all());
         if ($form->isValid()) {
-            $this->civilityService->updateCivility($civility);
+            $this->civilityRequestHandler->updateCivility($civilityRequest, $civility);
 
             return $this->view($civility, Response::HTTP_OK);
         }
