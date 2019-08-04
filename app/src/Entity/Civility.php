@@ -2,10 +2,10 @@
 
 namespace App\Entity;
 
+use App\Civility\CivilityRequest;
 use App\Model\CivilityInterface;
 use Doctrine\ORM\Mapping as ORM;
 use JMS\Serializer\Annotation\Groups;
-use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity
@@ -33,10 +33,6 @@ class Civility implements CivilityInterface
      * @var string
      *
      * @ORM\Column(name="name", type="string")
-     * @Assert\NotBlank
-     * @Assert\Length(
-     *      max = 255
-     * )
      * @Groups({"Default","user_info"})
      */
     private $name;
@@ -47,15 +43,27 @@ class Civility implements CivilityInterface
      * @var string
      *
      * @ORM\Column(name="code", type="string", length=10)
-     * @Assert\NotBlank
-     * @Assert\Length(
-     *      max = 10
-     * )
      * @Groups({"Default","user_info"})
      */
     private $code;
 
-    public function getId(): ?int
+    public static function create(string $name, string $code): self
+    {
+        $civility = new self();
+
+        $civility->name = $name;
+        $civility->code = $code;
+
+        return $civility;
+    }
+
+    public function update(CivilityRequest $civilityRequest): void
+    {
+        $this->name = $civilityRequest->name;
+        $this->code = $civilityRequest->code;
+    }
+
+    public function getId(): int
     {
         return $this->id;
     }
@@ -65,7 +73,7 @@ class Civility implements CivilityInterface
         $this->name = $name;
     }
 
-    public function getName(): ?string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -75,7 +83,7 @@ class Civility implements CivilityInterface
         $this->code = $code;
     }
 
-    public function getCode(): ?string
+    public function getCode(): string
     {
         return $this->code;
     }
